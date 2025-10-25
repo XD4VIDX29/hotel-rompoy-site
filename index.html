@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rompoy Central La 80</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; color: #333; }
+        .bg-hotel-orange { background-color: #ff6200; } /* Naranja propio y natural */
+        .custom-shadow { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+        .fade-in { opacity: 0; animation: fadeIn 1.5s ease-in-out forwards; }
+        .slide-in-left { opacity: 0; transform: translateX(-50px); animation: slideInLeft 1s ease forwards; }
+        .slide-in-right { opacity: 0; transform: translateX(50px); animation: slideInRight 1s ease forwards; }
+        .hover-lift { transition: transform 0.3s, box-shadow 0.3s; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { to { opacity: 1; transform: translateX(0); } }
+        .welcome-bg { background-color: #ff6200; padding: 40px 20px; display: flex; align-items: center; gap: 20px; }
+        .logo { max-width: 150px; height: auto; }
+        .text-container { flex-grow: 1; text-align: center; }
+        .room-card { background-color: #fff; border-radius: 10px; overflow: hidden; }
+        .price-table th { background-color: #f2f2f2; }
+        .price-table td, .price-table th { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+        @media (max-width: 640px) {
+            .welcome-bg { flex-direction: column; padding: 20px 10px; }
+            .logo { margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="welcome-bg">
+        <div class="fade-in" style="animation-delay: 0.2s;">
+            <img src="https://cdn.discordapp.com/attachments/1403820859994669168/1431453418693591041/image.png?ex=68fd7862&is=68fc26e2&hm=881bdc6c0e9e25d7cada5eebad71da930daeedb9d542fc7bfdaad424733e6d12&" alt="Logo Hotel Rompoy Central La 80" class="logo">
+        </div>
+        <div class="text-container fade-in" style="animation-delay: 0.4s;">
+            <h1 class="text-5xl font-bold text-white mb-4" style="text-align: center;">Hotel Rompoy Central La 80</h1>
+            <p class="text-xl text-white mb-6" style="text-align: center;">Abierto las 24 horas - Tu refugio acogedor en Chigorodó, Antioquia</p>
+            <a href="#reservas" class="bg-white text-gray-800 px-6 py-2 rounded-full hover:bg-gray-200 transition hover-lift" style="display: inline-block;">Reserva Ahora</a>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 slide-in-left">Nuestras Habitaciones</h2>
+        <p class="text-center mb-12 text-lg">Ofrecemos una variedad de habitaciones cómodas para satisfacer tus necesidades. Todas incluyen baño privado y comodidades esenciales para una estancia agradable.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="room-card custom-shadow slide-in-left hover-lift">
+                <img src="https://cdn.discordapp.com/attachments/1403820859994669168/1431445725547466893/Imagen_de_WhatsApp_2025-10-24_a_las_19.50.39_a455f445.jpg?ex=68fd7137&is=68fc1fb7&hm=1ceceeead20deb88b8f2fd7e3f5ab86f35aed07f97009b09a8a75afc1dd4f694&" alt="Habitación Individual con Aire Acondicionado" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Habitación Individual con Aire Acondicionado</h3>
+                    <p class="text-lg mb-4">$65.000 COP por noche</p>
+                    <p class="text-gray-600">Ideal para viajeros solos, con aire acondicionado para un descanso fresco y confortable.</p>
+                </div>
+            </div>
+            
+            <div class="room-card custom-shadow slide-in-right hover-lift">
+                <img src="https://cdn.discordapp.com/attachments/1403820859994669168/1431454857490993363/Imagen_de_WhatsApp_2025-10-24_a_las_20.28.46_74611c96.jpg?ex=68fd79b9&is=68fc2839&hm=bbaaf221db5bf19c506b1c132f8bcddb0c6ea2677f24f7e0684468c13b50bc57&" alt="Habitación Individual con Ventilador" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Habitación Individual con Ventilador</h3>
+                    <p class="text-lg mb-4">$50.000 COP por noche</p>
+                    <p class="text-gray-600">Opción económica con ventilador para una estancia cómoda y refrescante.</p>
+                </div>
+            </div>
+            
+            <div class="room-card custom-shadow slide-in-left hover-lift">
+                <img src="https://media.discordapp.net/attachments/1403820859994669168/1431443207152996525/Imagen_de_WhatsApp_2025-10-24_a_las_19.13.05_74016e43.jpg?ex=68fd6edf&is=68fc1d5f&hm=955728528416ee255b5e89b3d4821016b1891d533838441b776f59a1952517b1&=&format=webp&width=1421&height=800" alt="Habitación Múltiple con Aire Acondicionado" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Habitación Múltiple con Aire Acondicionado (2 Camas)</h3>
+                    <ul class="text-lg list-disc pl-5">
+                        <li>1 Persona: $75.000 COP</li>
+                        <li>2 Personas: $95.000 COP</li>
+                        <li>3 Personas: $130.000 COP</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">Perfecta para grupos pequeños, con aire acondicionado y espacio para hasta 3 personas.</p>
+                </div>
+            </div>
+            
+            <div class="room-card custom-shadow slide-in-right hover-lift">
+                <img src="https://media.discordapp.net/attachments/1403820859994669168/1431443207551451226/Imagen_de_WhatsApp_2025-10-24_a_las_19.13.30_4512f1f4.jpg?ex=68fd6edf&is=68fc1d5f&hm=770c27d6293e8f4f28410c2ab6810d7177305c391ca652fd24253da2a1e88867&=&format=webp&width=1421&height=800" alt="Habitación Múltiple con Ventilador" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-4">Habitación Múltiple con Ventilador (3 Camas)</h3>
+                    <ul class="text-lg list-disc pl-5">
+                        <li>1 Persona: $55.000 COP</li>
+                        <li>2 Personas: $70.000 COP</li>
+                        <li>3 Personas: $100.000 COP</li>
+                        <li>4-5 Personas: $130.000 COP</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">Espaciosa para familias o grupos, con ventilador para una ventilación natural.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="text-3xl font-bold text-center mb-6 text-gray-800 fade-in">Tarifas Adicionales</h3>
+        <table class="price-table w-full max-w-2xl mx-auto border-collapse custom-shadow rounded-lg overflow-hidden fade-in">
+            <thead>
+                <tr>
+                    <th class="text-left">Concepto</th>
+                    <th>Aire Acondicionado</th>
+                    <th>Ventilador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Persona Adicional</td>
+                    <td>$35.000 COP</td>
+                    <td>$25.000 COP</td>
+                </tr>
+                <tr>
+                    <td>Hora Adicional</td>
+                    <td>$15.000 COP</td>
+                    <td>$10.000 COP</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="text-center mt-8 text-lg fade-in">Descuentos corporativos: 20% para contratos que superen más de 30 días. Reservaciones con 1 día de anticipación mínimo y cancelación al 50% por anticipado.</p>
+    </section>
+
+    <section class="bg-gray-100 py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 slide-in-left">Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white p-6 rounded-lg custom-shadow hover-lift slide-in-left">
+                <h3 class="text-2xl font-semibold mb-4">Baño Privado</h3>
+                <p class="text-gray-600">Todas las habitaciones incluyen baño privado para tu privacidad y comodidad.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg custom-shadow hover-lift fade-in">
+                <h3 class="text-2xl font-semibold mb-4">TV en todas las Habitaciones</h3>
+                <p class="text-gray-600">Disfruta de entretenimiento con TV disponible en habitaciones seleccionadas.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg custom-shadow hover-lift slide-in-right">
+                <h3 class="text-2xl font-semibold mb-4">Aire Acondicionado o Ventilador</h3>
+                <p class="text-gray-600">Elige entre habitaciones con aire acondicionado o ventilador según tus preferencias.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="max-w-6xl mx-auto py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 slide-in-right">Reserva Ahora</h3>
+        <form class="bg-white p-8 rounded-lg custom-shadow max-w-xl mx-auto fade-in">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                <input type="text" id="name" class="w-full p-3 border rounded-lg focus:outline-none focus:border-gray-800">
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+                <input type="tel" id="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:border-gray-800">
+            </div>
+            <div class="mb-4">
+                <label for="checkin" class="block text-gray-700 font-semibold mb-2">Fecha de Check-in</label>
+                <input type="date" id="checkin" class="w-full p-3 border rounded-lg focus:outline-none focus:border-gray-800">
+            </div>
+            <div class="mb-4">
+                <label for="checkout" class="block text-gray-700 font-semibold mb-2">Fecha de Check-out</label>
+                <input type="date" id="checkout" class="w-full p-3 border rounded-lg focus:outline-none focus:border-gray-800">
+            </div>
+            <div class="mb-4">
+                <label for="room" class="block text-gray-700 font-semibold mb-2">Tipo de Habitación</label>
+                <select id="room" class="w-full p-3 border rounded-lg focus:outline-none focus:border-gray-800">
+                    <option value="">Selecciona una opción</option>
+                    <option value="individual-ac">Individual con Aire Acondicionado ($65.000)</option>
+                    <option value="individual-vent">Individual con Ventilador ($50.000)</option>
+                    <option value="multiple-ac">Múltiple con Aire Acondicionado (2 Camas)</option>
+                    <option value="multiple-vent">Múltiple con Ventilador (3 Camas)</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-900 transition hover-lift">Enviar Reservación</button>
+        </form>
+        <p class="text-center mt-6">Medios de pago: NEQUI 1431443208537378826 / Código QR</p>
+    </section>
+
+    <section class="bg-gray-100 py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 fade-in">Políticas del Hotel</h2>
+        <div class="max-w-4xl mx-auto text-gray-600">
+            <ul class="list-disc pl-8 space-y-4">
+                <li class="slide-in-left">Check-in: Presenta tu documento de identificación o cédula en recepción, regístrate e ingresa los datos.</li>
+                <li class="slide-in-right">Check-out: Confirma si continúas antes de las 2 p.m. del día siguiente; de lo contrario, se cobra hora adicional.</li>
+                <li class="slide-in-left">No se hace devolución de dinero por reservación de hospedaje después de registrarse.</li>
+                <li class="slide-in-right">El hotel no se hace responsable por dinero, joyas u objetos de valor dejados en la habitación.</li>
+                <li class="slide-in-left">Los servicios prestados por el hotel como hospedaje, cafetería, lavandería, etc. se deben cancelar en efectivo o mediante medios de pago que ofrezca el hotel.</li>
+                <li class="slide-in-right">Solo se permite el ingreso mediante diferentes medios de pago que ofrezca el hotel.</li>
+                <li class="slide-in-left">No están autorizados los créditos por ningún concepto.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-800 slide-in-left">Ubicación</h2>
+        <p class="text-center mb-6 text-lg fade-in">Cra. 103a #97-43, Chigorodó, Chigorodó, Antioquia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.352174627074!2d-76.68014898551314!3d7.666335794576318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b0e8e8e8e8e8e%3A0x1234567890abcdef!2sCra.+103a+%2397-43%2C+Chigorod%C3%B3%2C+Antioquia!5e0!3m2!1ses!2sco!4v1634567890!5m2!1ses!2sco" width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" class="custom-shadow fade-in"></iframe>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p class="text-lg">Hotel Rompoy Central La 80 | NIT. 4791465-9 | R.N.T. 56534</p>
+        <p class="mt-2">Contacto: (604) 8433605 | NEQUI: 312326872</p>
+    </footer>
+
+    <script>
+       
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Reserva enviada con éxito! Nos pondremos en contacto contigo.');
+            form.reset();
+        });
+
+        
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
